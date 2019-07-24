@@ -53,6 +53,8 @@ public class ReportsCreateServlet extends HttpServlet {
             r.setReport_date(report_date);
 
             r.setTitle(request.getParameter("title"));
+            r.setTitle(request.getParameter("client"));     //顧客情報追加
+            r.setTitle(request.getParameter("progress"));   //進捗情報追加
             r.setContent(request.getParameter("content"));
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());

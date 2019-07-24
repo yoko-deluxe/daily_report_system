@@ -17,6 +17,23 @@
                             <th>日付</th>
                             <td><fmt:formatDate value='${report.report_date}' pattern='yyyy-MM-dd' /></td>
                         </tr>
+
+
+                         <tr>
+                            <th>顧客情報</th>
+                            <td>
+                                <pre><c:out value="${report.client}" /></pre>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>進捗状況</th>
+                            <td>
+                                <pre><c:out value="${report.progress}" /></pre>
+                            </td>
+                        </tr>
+
+
                         <tr>
                             <th>内容</th>
                             <td>

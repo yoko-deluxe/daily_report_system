@@ -58,6 +58,16 @@ public class Report {
     @Column(name = "title", length = 255, nullable = false)
     private String title;
 
+
+// ※顧客情報の追加
+    @Column(name = "client") //顧客名は任意入力とする
+    private String client;
+
+// ※取引の進捗の追加
+    @Column(name = "progress") //進捗は任意入力とする
+    private String progress;
+
+
 // テキストエリアの指定を行うのが @Lob アノテーションです。
 // これを指定することで、改行もデータベースに保存されます。
     @Lob
@@ -125,5 +135,23 @@ public class Report {
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
+
+    public String getClient() {
+        return client;
+    }
+
+    public void setClient(String client) {
+        this.client = client;
+    }
+
+    public String getProgress() {
+        return progress;
+    }
+
+    public void setProgress(String progress) {
+        this.progress = progress;
+    }
+
+
 }
 
